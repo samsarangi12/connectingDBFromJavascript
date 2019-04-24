@@ -1,10 +1,8 @@
 
 exports.up = function(knex, Promise) {
   return Promise.all([
-  knex.schema.createTable('milestones', function(table){
-    table.increments('id').notNullable();
-    table.string('description');
-    table.date('date_achieved');
+    knex.schema.alterTable('milestones', function(table){
+      table.integer('famous_person_id');
     })
   ])
 };
