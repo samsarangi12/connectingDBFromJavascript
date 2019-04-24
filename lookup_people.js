@@ -1,11 +1,11 @@
-function accpetInput () {
+function acceptInput () {
 
   const input = process.argv.slice(2)[0];
   return input;
 }
 
 function accessDetails () {
-  const input = accpetInput();
+  const input = acceptInput();
   const pg = require("pg");
   const settings = require("./settings"); // settings.json
 
@@ -47,9 +47,3 @@ function displayOutput(item) {
 }
 
 accessDetails ();
-
-
-
-
-
-
